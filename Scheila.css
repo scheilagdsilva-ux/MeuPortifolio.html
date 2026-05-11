@@ -236,21 +236,7 @@ div{
     font-weight: bold;
     font-size: 18px;
 }
-.hero {
-    height: 75px; /* ocupa a tela inteira */
-    background-image: url("sua-imagem.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    color: white;
-    padding: 20px;
-}
 
 .hero-content h1 {
     font-size: 3rem;
@@ -276,20 +262,9 @@ div{
 .btn-hero:hover {
     background-color: #cc7a00;
 }
-.hero {
-    height: 60%; /* deixa espaço para o rodapé */
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-    display: flex;
-    align-items: flex-start; /* texto no topo */
-    justify-content: center;
-    padding-top: 80px; /* distância do topo */
-}
 
-/* Caixa transparente atrás do texto */
+
 .hero-overlay {
 background: linear-gradient(
         to bottom,
