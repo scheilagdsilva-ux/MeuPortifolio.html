@@ -85,10 +85,8 @@ button:hover {
     border-radius: 10px;
 }
 
-/* CARDÁPIO */
-.menu {
-    padding: 40px 20px;
-}
+
+
 
 .tipos-burgers,
 .tipos_de_combos {
@@ -188,8 +186,25 @@ input {
     text-decoration: none;
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #d2b48c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+
 .rodape img {
     width: 30px;
+}
+
+body {
+    padding-top: 80px;
 }
 
 /* RESPONSIVO */
@@ -201,8 +216,92 @@ input {
     .inicio {
         flex-direction: column;
     }
+    
+
+    .hero2 h1 {
+        font-size: 35px;
+    }
+
 
     .hero h1 {
         font-size: 2rem;
     }
 }
+
+
+.hero2 {
+    background-color: #0b0604;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero2 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero2 p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+
+
+.btn-whatsapp {
+    display: inline-block;
+    background: #ff5a00;
+    color: white;
+    padding: 15px 35px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background: #ff7a00;
+    transform: scale(1.05);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #d2b48c; /* cor bege elegante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    color: #0b5c6b;
+    font-size: 22px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #1e2a38;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-header {
+    background: #0b2e4d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 80px;
+}
+
