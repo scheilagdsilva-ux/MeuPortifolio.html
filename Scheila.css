@@ -1,350 +1,208 @@
-.caixa{
-   margin-left: 220px;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
- 
-a{
-    padding: 20px;
-    margin: 20px;  
+
+/* BASE */
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
 }
-.contentor {
-    display: flex;  
-    justify-content: space-around;
-    align-items: center;
-    background: hsla(355, 79%, 48%, 0.841);
-    padding: 20%;
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #111;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
-.item{
-    padding: 10px 20px;
-    font-size: 18px;
-    text-transform: uppercase;
+
+nav a:hover {
+    background-color: #ff7a00;
 }
-.voltar-topo { 
- position: fixed;
- bottom: 10px;
-right: 20px;
-background:  hsla(355, 71%, 64%, 0.841);
-color: white;
-padding: 12px 18px 10px; 
-border-radius: 6px;
-text-decoration: none;
-font-weight: bold;
-z-index: 100;
-}
-.inicio.right{ 
-    width: 50%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 20%;
-}
-.left{
-    width: 50%;
-    background-color:rgba(241, 118, 11, 0.701);
+
+/* HERO */
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 20px;
     text-align: center;
 }
-div{
-    display: inline-block;
-    margin-top: 40px;
+
+.hero-overlay {
+    max-width: 600px;
 }
-----------------------------------------------------------
-/* Layout dos cards */
-.lista-burgers {
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.btn-hero,
+button {
+    background-color: #ff7a00;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-hero:hover,
+button:hover {
+    background-color: #ff9500;
+}
+
+/* IMAGEM HERO */
+.hero img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* CARDÁPIO */
+.menu {
+    padding: 40px 20px;
+}
+
+.tipos-burgers,
+.tipos_de_combos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 20px;
-}
-/* Estilo dos cards */
-.burger {
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-/* Camada escura para o texto ficar legível */
-.burger:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(241, 118, 11, 0.701);
-    border-radius: 12px;
-    z-index: 0;
-}
-.burger * {
-    position: relative;
-    z-index: 1;
-}
-.burger img {
-    width: 100%;
-    height: auto;
-    max-height: 180px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.burger-classico {
-    background-image: url('hamburguer\ classico.jpg');
-   
-
-}
-.rodape {
-    background: rgba(241, 118, 11, 0.701);;
-    padding: 25px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    margin-top: auto;
-}
-.rodape .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-}
-.rodape .icon img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
-    transition: 0.3s;
-}
-/* Efeito ao passar o mouse */
-.rodape .icon:hover img {
-    transform: scale(1.15);
 }
 
-.rodape .icon:hover span {
-    color: #ffd4d4;
-}
-
-.menu {
-    padding: 40px;
-    text-align: center;
-}
-
-.menu h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #693d3d;
-}
-.tipos-burgers
-  {
-    display: flex;
-     justify-content: space-around;
-    gap: 25px;
-    margin-bottom: 40px;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.23);
-     margin-top: 40px;
-}
-.tipos-burgers:hover {
-
-    background: 0 4px 10px rgb(229, 95, 10);
-}
-.tipos_de_combos {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 40px;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.23);
-}
-/* CARD DO BURGER */
-.burger {
-    background: #693d3d;
-    color: white;
-    padding: 20% 20px 15px 5px;
-    border-radius: 10%;
-    box-shadow: 0 4px 10px rgb(229, 95, 91);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-/* IMAGEM COMPLETA, SEM CORTES */
-.burger img
-  {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* MOSTRA A IMAGEM INTEIRA */
-    margin-bottom: 10px;
-}
-/* ACOMPANHAMENTOS */
-.acompanhamentos {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-.acompanhamentos .item {
-    background: #f2d6d6;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    color:rgba(241, 118, 11, 0.701);
-}
-.tipos-de-combos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 40px 0;
-}
+/* CARD */
+.burger,
 .combo {
-    background: rgba(241, 118, 11, 0.701);
-    color: white;
-    width: 260px;
+    background-color: #1a1a1a;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0,0,0,0.25);
-    transition: transform .2s ease-in-out;
+    transition: 0.3s;
 }
+
+.burger:hover,
 .combo:hover {
     transform: scale(1.05);
 }
+
+.burger img,
 .combo img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
-.combo h3 {
-    margin-bottom: 8px;
-    font-size: 20px;
-}
-.combo p {
-    margin: 5px 0;
-}
+
+/* PREÇO */
+.burger span,
 .combo span {
-    display: block;
-    margin-top: 10px;
+    color: #ff7a00;
     font-weight: bold;
-    font-size: 18px;
 }
 
-
-.hero-content h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+/* SEÇÃO HISTÓRIA */
+.inicio {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+.left {
+    flex: 1;
+    background-color: #ff7a00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn-hero {
-    background-color: #ff9900;
-    padding: 12px 25px;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 1.2rem;
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+/* FORM */
+#cadastro {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* BOTÃO VOLTAR */
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff7a00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: 0.3s;
 }
 
-.btn-hero:hover {
-    background-color: #cc7a00;
+/* FOOTER */
+.rodape {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-
-
-.hero-overlay {
-background: linear-gradient(
-        to bottom,
-        rgba(241, 118, 11, 0.701),
-        rgba(236, 175, 175, 0.958)
-    ); /* transparência */
-    padding: 30px 40px;
-    border-radius: 10px;
+.rodape .icon {
     text-align: center;
     color: white;
-    max-width: auto;
-}
-
-/* Título */
-.hero-overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
-/* Subtítulo */
-.hero-overlay p {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-}
-
-/* Botão */
-.btn-hero {
-    background-color: rgb(229, 95, 91);;
-    padding: 12px 25px;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 1.2rem;
     text-decoration: none;
-    transition: 0.3s;
 }
 
-.btn-hero:hover {
-    background-color: #cc7a00;
+.rodape img {
+    width: 30px;
 }
 
-@media (max-width: 1024px) {
-
-    .left,
-    .right {
-        width: 100%;
-    }
-
-    .hero-overlay {
-        max-width: 90%;
-    }
-}
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
 
     .inicio {
         flex-direction: column;
     }
 
-    .left,
-    .right {
-        width: 100%;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    h1 {
+    .hero h1 {
         font-size: 2rem;
     }
-}
-
-.cadastro {
-    background-color: rgba(241, 118, 11, 0.15);
-    padding: 40px;
-    max-width: 600px;
-    margin: 40px auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
